@@ -783,6 +783,121 @@ img {
     text-decoration: underline;
 }
 
+/* Interactive hero project carousel */
+
+.hero-flip-card {
+    width: 100%;
+    height: 300px;
+    perspective: 1000px;
+    cursor: pointer;
+    outline-offset: 5px;
+}
+
+.hero-flip-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.65s ease;
+    transform-style: preserve-3d;
+}
+
+.hero-flip-card.is-flipped .hero-flip-inner {
+    transform: rotateY(180deg);
+}
+
+.hero-flip-front,
+.hero-flip-back {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    border-radius: 14px;
+    overflow: hidden;
+}
+
+.hero-flip-front img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+}
+
+.hero-flip-back {
+    transform: rotateY(180deg);
+    background: #1b122b;
+    border: 1px solid #a78bfa;
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 12px;
+}
+
+.hero-flip-back h3 {
+    color: #ffffff;
+    font-size: 22px;
+    margin: 0;
+}
+
+.hero-flip-back p {
+    color: #c4b5fd;
+    line-height: 1.5;
+    margin: 0;
+}
+
+.hero-flip-back a {
+    color: #c4b5fd;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.hero-flip-back a:hover {
+    text-decoration: underline;
+}
+
+.hero-controls {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.hero-controls button {
+    background: transparent;
+    color: #c4b5fd;
+    border: 1px solid #a78bfa;
+    border-radius: 8px;
+    padding: 4px 10px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.hero-controls button:hover {
+    background: #a78bfa;
+    color: #0b0812;
+}
+
+#heroCounter {
+    white-space: nowrap;
+    font-variant-numeric: tabular-nums;
+}
+
+@media (max-width: 600px) {
+    .hero-flip-card {
+        height: 250px;
+    }
+
+    .hero-flip-back {
+        padding: 16px;
+    }
+
+    .hero-flip-back h3 {
+        font-size: 18px;
+    }
+}
+
 @media(max-width:900px) {
     .hero {
         grid-template-columns: 1fr;
