@@ -65,34 +65,58 @@
             <div class="hero-visual">
                 <div class="visual-label">SELECTED WORK / 2026</div>
 
-                <div class="hero-flip-card"
-                     id="heroFlipCard"
-                     tabindex="0"
-                     role="button"
-                     aria-label="Flip project card to see details"
-                     aria-pressed="false">
+                
+<div class="hero-card-stack">
 
-                    <div class="hero-flip-inner">
+    <div class="hero-stack-card hero-stack-back"
+         aria-hidden="true">
+        <img id="heroBackImage"
+             src="assets/equipment-rental.svg"
+             alt="">
+    </div>
 
-                        <div class="hero-flip-front">
-                            <img id="heroProjectImage"
-                                 src="assets/equipment-rental.svg"
-                                 alt="Equipment Rental Platform">
-                        </div>
+    <div class="hero-stack-card hero-stack-middle"
+         aria-hidden="true">
+        <img id="heroMiddleImage"
+             src="assets/equipment-rental.svg"
+             alt="">
+    </div>
 
-                        <div class="hero-flip-back">
-                            <h3 id="heroProjectTitle">Equipment Rental Platform</h3>
-                            <p id="heroProjectDescription">
-                                A rental management platform for equipment,
-                                scheduling, and reservations.
-                            </p>
-                            <a id="heroProjectLink" href="projects.html">
-                                View Project ↗
-                            </a>
-                        </div>
+    <div class="hero-flip-card hero-stack-front"
+         id="heroFlipCard"
+         tabindex="0"
+         role="button"
+         aria-label="Flip project card to see details"
+         aria-pressed="false">
 
-                    </div>
-                </div>
+        <div class="hero-flip-inner">
+
+            <div class="hero-flip-front">
+                <img id="heroProjectImage"
+                     src="assets/equipment-rental.svg"
+                     alt="Equipment Rental Platform">
+            </div>
+
+            <div class="hero-flip-back">
+                <h3 id="heroProjectTitle">
+                    Equipment Rental Platform
+                </h3>
+
+                <p id="heroProjectDescription">
+                    A rental management platform for equipment,
+                    scheduling, and reservations.
+                </p>
+
+                <a id="heroProjectLink" href="projects.html">
+                    View Project ↗
+                </a>
+            </div>
+
+        </div>
+    </div>
+
+</div>
+
 
                 <div class="visual-bottom">
                     <span>Code with purpose.</span>
