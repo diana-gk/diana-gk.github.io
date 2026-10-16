@@ -28,51 +28,42 @@
             <p class="lead">Have a project, collaboration, internship, or engineering opportunity? I'd love to hear
                 about it.</p>
         </section>
-        <section class="wrap contact-layout section-tight">
+        <section class="wrap contact-layout section-tight contact-redesign">
             <div class="contact-panel">
+                <div class="eyebrow">GET IN TOUCH</div>
                 <h2>Send a message.</h2>
-                <p>This form opens your email app with a prefilled draft. No backend or account setup required.</p>
-                <form id="contact-form"><label>Your name<input name="name" type="text" required
-                            placeholder="Your name"></label><label>Your email<input name="email" type="email" required
-                            placeholder="you@example.com"></label><label>What can I help with?<select name="topic">
-                            <option>Website or e-commerce</option>
-                            <option>Business software</option>
-                            <option>Collaboration</option>
-                            <option>Software engineering opportunity</option>
-                            <option>Something else</option>
-                        </select></label><label>Message<textarea name="message" rows="6" required
-                            placeholder="Tell me a little about your idea..."></textarea></label><button
-                        class="btn btn-primary" type="submit">Open email draft ↗</button></form>
+                <p>Have a project or question? Send me a note and I'll get back to you.</p>
+                <form id="contact-form">
+                    <div class="contact-fields-two">
+                        <label>Your name<input name="name" autocomplete="name" required placeholder="Your name"></label>
+                        <label>Email address<input name="email" type="email" autocomplete="email" required placeholder="you@example.com"></label>
+                    </div>
+                    <label>What can I help with?<select name="topic"><option>Website or e-commerce</option><option>Business software</option><option>Collaboration</option><option>Software engineering opportunity</option><option>Something else</option></select></label>
+                    <label>Message<textarea name="message" rows="5" required placeholder="Tell me a little about your idea..."></textarea></label>
+                    <button class="btn btn-primary" type="submit">Open email draft ↗</button>
+                    <p class="quiet">This opens your email app. Automated receipt emails require a connected form service.</p>
+                </form>
             </div>
-            <aside class="contact-side">
-                <h2>Connect directly.</h2>
-                <p>I'm based in New York City and open to remote collaborations.</p>
-                <a
-                    href="mailto:dgp9937@nyu.edu">dgp9937@nyu.edu ↗</a>
-                    <a
-                    href="mailto:di6nagk@gmail.com">di6nagk@gmail.com ↗</a>
-                    <a href="https://github.com/diana-gk"
-                    target="_blank" rel="noopener">GitHub ↗</a>
-                    <a href="https://www.linkedin.com/in/diana--prokopenko/"
-                    target="_blank" rel="noopener">LinkedIn ↗</a>
-                    <a href="assets/Diana_Prokopenko_Resume.pdf" target="_blank" rel="noopener"> View My Resume ↗ </a>
-                <p class="quiet">Instagram: coming soon</p>
-
-
-                <div class="contact-phones">
-                    <h3>Call or Text Me</h3>
-
-                    <p>
-                        <strong>Primary:</strong>
-                        <a href="tel:+1XXXXXXXXXX">(718) 825-4939</a>
-                    </p>
-
-                    <p>
-                        <strong>Secondary:</strong>
-                        <a href="tel:+1YYYYYYYYYY">(732) 298-0475</a>
-                    </p>
-                </div>
+            <aside class="contact-side booking-panel" id="book-meeting">
+                <div class="eyebrow">LET'S TALK</div>
+                <h2>Meeting with Diana.</h2>
+                <p>Choose your preferred meeting format and duration, then select a time on my booking calendar.</p>
+                <div class="booking-details"><span>◷ &nbsp; Default: 30 minutes</span><span>◈ &nbsp; Monday – Thursday</span><span>✦ &nbsp; Fri–Sun by request</span></div>
+                <label class="booking-label" for="meeting-type">Appointment type</label>
+                <select id="meeting-type"><option value="Phone call">Phone call</option><option value="Virtual meeting">Virtual meeting</option><option value="In-person meeting">In-person meeting</option></select>
+                <label class="booking-label" for="meeting-duration">Appointment duration</label>
+                <select id="meeting-duration"><option value="30" selected>30 minutes</option></select>
+                <div id="google-booking-button" class="google-booking-button"></div>
+                <p id="booking-feedback" class="quiet" role="status">Google Calendar will show available times and send booking confirmations. Select your appointment type in the Google booking form if prompted.</p>
+                <p class="quiet">Booking opens in a Google Calendar popup on this page.</p>
+                <p class="quiet">Email verification depends on your NYU Google Calendar booking settings.</p>
             </aside>
+        </section>
+        <section class="wrap direct-contact section-tight">
+            <div class="contact-side"><h2>Connect directly.</h2><p>Based in New York City · Open to remote collaborations.</p>
+                <div class="direct-links"><a href="mailto:dgp9937@nyu.edu">NYU email ↗</a><a href="mailto:di6nagk@gmail.com">Personal email ↗</a><a href="https://github.com/diana-gk" target="_blank" rel="noopener">GitHub ↗</a><a href="https://www.linkedin.com/in/diana--prokopenko/" target="_blank" rel="noopener">LinkedIn ↗</a><a href="assets/Diana_Prokopenko_Resume.pdf" target="_blank" rel="noopener">Resume ↗</a></div>
+                <div class="contact-phones"><h3>Call or text</h3><p><strong>Primary:</strong> <a href="tel:+17188254939">(718) 825-4939</a></p><p><strong>Secondary:</strong> <a href="tel:+17322980475">(732) 298-0475</a></p></div>
+            </div>
         </section>
     </main>
     <footer class="site-footer">
@@ -84,6 +75,7 @@
         </div>
     </footer>
     <script src="script.js" defer></script>
+    <script src="contact-booking.js" defer></script>
 </body>
 
 </html>
